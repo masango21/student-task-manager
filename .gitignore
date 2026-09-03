@@ -1,0 +1,16 @@
+# dependencies
+**/node_modules/
+
+# environment files
+.env
+.env.*
+!.env.example
+
+# build output
+frontend/.next/
+frontend/out/
+
+# local tooling
+.vercel/
+.DS_Store
+npm-debug.log*
