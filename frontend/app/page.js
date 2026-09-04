@@ -2,7 +2,9 @@
 
 import { useEffect, useMemo, useState } from "react";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5100";
+const API_URL = (process.env.NEXT_PUBLIC_API_URL || "http://localhost:5100")
+  .replace(/\/+$/, "")
+  .replace(/\/api$/, "");
 
 async function request(path, options = {}) {
   const response = await fetch(`${API_URL}${path}`, {
